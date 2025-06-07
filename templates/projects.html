@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-white p-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for project in projects %}
+        <div class="project-card bg-white dark:bg-gray-700 rounded-xl overflow-hidden shadow-md transition-all duration-300">
+            <div class="h-48 bg-gradient-to-r {{ project.gradient_from }} {{ project.gradient_to }}"></div>
+            <div class="p-6">
+                <h3 class="text-xl font-bold mb-2">{{ project.title }}</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-4">{{ project.description }}</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    {% for tech in project.tech_stack.split(',') %}
+                        <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs rounded">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+                <div class="flex justify-between">
+                    <a href="{{ project.view_url }}" class="text-blue-500 dark:text-blue-400 hover:underline">View Project</a>
+                    <a href="{{ project.github_url }}" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
