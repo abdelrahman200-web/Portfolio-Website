@@ -45,8 +45,8 @@ Showcases my completed projects with descriptions and links (if applicable).
 ## Contact
 Feel free to reach out to me via:
 - Email: bsyd654@gmail.com
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/abdelrahman-saeed-b74587317/)
-- GitHub: [Your GitHub Profile](https://github.com/abdelrahman200-web)
+- LinkedIn: (https://www.linkedin.com/in/abdelrahman-saeed-b74587317/)
+- GitHub: (https://github.com/abdelrahman200-web)
 
 ---
 
